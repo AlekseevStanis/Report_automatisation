@@ -37,7 +37,7 @@ default_args = {
 schedule_interval = '0 23 * * *'
 
 @dag(default_args=default_args, schedule_interval=schedule_interval, catchup=False)
-def ass_dag_etl_1657742(): # dag name should be unique
+def stanly_dag_etl_1657742(): # dag name should be unique
 
     @task()
     def extract_actions():
@@ -178,4 +178,4 @@ def ass_dag_etl_1657742(): # dag name should be unique
     united=merge_in_all(df_gender, df_os, df_age)
     load(united)
 
-ass_dag_etl_1657742 = ass_dag_etl_1657742()
+stanly_dag_etl_1657742 = ass_dag_etl_1657742()
