@@ -36,7 +36,7 @@ default_args = {
 schedule_interval = '0 11 * * *'
 
 @dag(default_args=default_args, schedule_interval=schedule_interval, catchup=False)
-def ass_dag_bot_report_telegramm1224():
+def stanly_dag_bot_report_telegramm1224():
 
     @task()
     def extract_metrics():
@@ -193,4 +193,4 @@ def ass_dag_bot_report_telegramm1224():
     send_CTR(df_combined)
     send_messages(df_combined)
 
-ass_dag_bot_report_telegramm1224 = ass_dag_bot_report_telegramm1224()
+stanly_dag_bot_report_telegramm1224 = ass_dag_bot_report_telegramm1224()
